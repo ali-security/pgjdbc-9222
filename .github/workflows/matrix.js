@@ -24,7 +24,7 @@ matrix.addAxis({
     {value: 'corretto', vendor: 'amazon', weight: 1},
     {value: 'liberica', vendor: 'bellsoft', weight: 1},
     {value: 'microsoft', vendor: 'microsoft', weight: 1},
-    {value: 'oracle', vendor: 'oracle', weight: 1},
+    // {value: 'oracle', vendor: 'oracle', weight: 1},
     // There are issues running Semeru JDK with Gradle 8.5
     // See https://github.com/gradle/gradle/issues/27273
     // {value: 'semeru', vendor: 'ibm', weight: 4},
@@ -34,7 +34,7 @@ matrix.addAxis({
 });
 
 // We can't yet use EA here, see https://github.com/oracle-actions/setup-java/issues/65
-const eaJava = '23';
+const eaJava = '26';
 
 // Below versions will be used for testing only
 matrix.addAxis({
@@ -174,7 +174,7 @@ matrix.addAxis({
   name: 'gss',
   title: x => (x.value === 'yes' ? '' : 'no_') + 'gss',
   values: [
-    {value: 'yes', weight: 2},
+    // {value: 'yes', weight: 2},
     {value: 'no', weight: 10},
   ]
 });
